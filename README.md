@@ -17,7 +17,7 @@ Note that this quite well known Tomcat's feature since some version of Tomcat lo
 
 And perhaps some version of the [JRE Memory Leak Prevention Listener](https://tomcat.apache.org/tomcat-9.0-doc/config/listeners.html) introduced by accident this feature of loading from WEB-INF/lib which is used by so many webapps now. Users don't think anymore that it is an accident and they think that it is a feature which makes their webapps' deployment autonomous.
 
-We have seen that the jdbc driver is loaded from WEB-INF/lib and used in a jndi datasource declared in context.xml. Now, a jndi mail session is the second thing declared in context.xml next to the datasource, to configure smtp server like the database server for the datasource. Is the javamail driver loaded from WEB-INF/lib and used in a jndi mail session?
+You have seen that the jdbc driver is loaded from WEB-INF/lib and used in a jndi datasource declared in context.xml. Now, a jndi mail session is the second thing declared in context.xml next to the datasource, to configure smtp server like the database server for the datasource. Is the javamail driver loaded from WEB-INF/lib and used in a jndi mail session?
 
 Not at all. See that the javamail driver is not loaded from WEB-INF/lib:
 
