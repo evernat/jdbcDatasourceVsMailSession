@@ -1,6 +1,6 @@
 # discussion of jdbc datasource vs mail session loading in Tomcat
 
-With the source of this basic webapp in this repo, see that the jdbc driver is loaded from WEB-INF/lib and used in a jndi datasource declared in context.xml:
+With the source of a basic webapp in this repo, see that the jdbc driver is loaded from WEB-INF/lib and used in a jndi datasource declared in context.xml:
 1. Either run `mvn tomcat7:run`
 2. Open http://localhost:8080/jdbc.jsp
 
