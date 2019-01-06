@@ -15,7 +15,7 @@ Note that this quite well known Tomcat's feature since some version of Tomcat lo
 >
 > Thus, the web applications that have database drivers in their WEB-INF/lib directory cannot rely on the service provider mechanism and should register the drivers explicitly.
 
-And perhaps some version of the [JRE Memory Leak Prevention Listener](https://tomcat.apache.org/tomcat-9.0-doc/config/listeners.html) introduced by accident this feature which is used by so many webapps now. Users don't think anymore that it is an accident and they think that it makes their webapps' deployment autonomous.
+And perhaps some version of the [JRE Memory Leak Prevention Listener](https://tomcat.apache.org/tomcat-9.0-doc/config/listeners.html) introduced by accident this feature which is used by so many webapps now. Users don't think anymore that it is an accident and they think that it is a feature which makes their webapps' deployment autonomous.
 
 We have seen that the jdbc driver is loaded from WEB-INF/lib and used in a jndi datasource declared in context.xml. Now, a jndi mail session is the second thing declared in context.xml next to the datasource, to configure smtp server like the database server for the datasource. Is the javamail driver loaded from WEB-INF/lib and used in a jndi mail session?
 
@@ -27,4 +27,4 @@ Why is there a difference of behavior from the user's point of view, between jdb
 
 Could it be fixed by loading the javamail driver from WEB-INF/lib?
 
-Or could the latest javamail driver be added in the Tomcat's lib directory? (There are not many questions for which javamail to use anyway.)
+Or could the latest javamail driver be added in the Tomcat's lib directory? (There are not many questions for which javamail to use anyway and it would make things easier.)
