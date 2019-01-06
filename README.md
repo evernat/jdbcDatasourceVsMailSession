@@ -23,6 +23,8 @@ Not at all. See that the javamail driver is not loaded from WEB-INF/lib:
 
 3. Open mail.jsp next to jdbc.jsp (http://localhost:8080/mail.jsp or http://localhost:8080/test-0.1/mail.jsp) and see "root Cause ClassNotFoundException: javax.mail.Authenticator"
 
-Why is there a difference of behavior from the user's point of view?
+Why is there a difference of behavior from the user's point of view, between jdbc datasource and mail session?
+
 Could it be fixed by loading the javamail driver from WEB-INF/lib?
+
 Or could the latest javamail driver be added in the Tomcat's lib directory? (there are no many questions which javamail to use anyway.)
