@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<Context> 
+  <Resource name="jdbc/DataSource" auth="Container" type="javax.sql.DataSource"
+               username="sa" password="" driverClassName="org.h2.Driver"
+               url="jdbc:h2:file:${java.io.tmpdir}/h2/test" />
+
+  <Resource name="mail/Session" auth="Container" type="javax.mail.Session" 
+    mail.smtp.host="mysmtpserver" />
+</Context>
